@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        <!-- meta tags -->
+        include layout/meta
         title #{pageTitle}
         <!-- css file -->
         include layout/style
-        link(rel="stylesheet", href="css/main.css")
+        block file-css
+            link(rel="stylesheet", href="css/main.css")
     body
         .page.home-page
             include layout/sidebar
@@ -16,8 +16,9 @@ html(lang="en")
                 include layout/header
                 .content
                     h1 #{pageTitle}
-                
+                    
 
         <!-- file js -->
         include layout/script
-        script(src="js/main.js")
+        block file-js
+            script(src="js/main.js")
