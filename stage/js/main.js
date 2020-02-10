@@ -13,5 +13,5 @@ $(function () {
         $(this).children('.toggle-submenu').toggleClass('down');
 
         $(this).next('.child-links').slideToggle();
-    });
+    }); 
 });
