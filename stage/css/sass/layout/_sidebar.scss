@@ -6,9 +6,86 @@
     height: 100%;
     background-color: #222d32;
     color: #fff;
-    padding: 15px;
     transition: .3s;
     &.no-sidebar {
         left: -250px;
+    }
+    .logo {
+        background-color: #3c8dbc;
+        padding: 15px 0;
+        margin-bottom: 30px;
+        font: {
+            weight: bold;
+            size: 26px;
+        }
+    }
+    .links-area {
+        padding: 10px 20px ;
+        // all links
+        li {
+            a {
+                color: #ccc;
+                display: block;
+                padding: 10px 20px;
+                transition: .3s;
+                &:hover {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+
+        }
+        // main links
+        > li > a {
+            position: relative;
+            color: #fff;
+            &::before  {
+                content: "";
+                position: absolute;
+                top: calc(50% - 5px);
+                left: 0 ;
+                width: 10px;
+                height: 10px;
+                border: 2px solid #fff;
+                border-radius: 50%;
+            }
+            &:hover {
+                padding-left: 30px ;
+            }
+        }
+        .toggle-submenu {
+            float: right;
+            position: relative;
+            top: 5px;
+            transition: .3s;
+            &.down {
+                transform: rotate(90deg);
+            }
+        }
+        .child-links {
+            position: relative;
+            display: none   ;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 4px;
+                width: 2px;
+                height: 100%;
+                background-color: #666;
+            }
+            a {
+                position: relative;
+                &:hover::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 4px;
+                    width: 2px;
+                    height: 100%;
+                    background-color: #fff;
+                }
+            }
+        }
     }
 }
