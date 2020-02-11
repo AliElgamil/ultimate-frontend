@@ -22,4 +22,34 @@ header.header
                         | You Got Email 
             .noti-foot.text-center
                 a(href="#") Viwe All Notifications
-        i.fas.fa-expand.fa-lg.header-icon.toggle-fullscreen
+    i.fas.fa-expand.fa-lg.header-icon.toggle-fullscreen
+    .dropdown.usermenu-container
+        .user#usermenu(data-noti='10' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            img.avatar.rounded-circle(src="image/000.jpg", alt="avatar")
+            span.user Ali Elgamil
+            i.fas.fa-angle-down.fa-lg
+        .dropdown-menu.dropdown-menu-right(aria-labelledby='usermenu')
+            .user-info
+                h3 Ali Elgamil 
+                p.lead Premium Member
+            hr
+            ul.activities-list.list-unstyled
+                li Add comment on post
+                li Created post on category
+                li create chart on charts page
+                li Add comment on post
+            hr
+            .user-links
+                .row
+                    .col
+                        .links-box 
+                            i.fas.fa-cog.lg.fw
+                            span Setting
+                    .col
+                        .links-box 
+                            i.fas.fa-user.lg.fw
+                            span My Profile
+                    .col
+                        .links-box 
+                            i.fas.fa-sign-out-alt.lg.fw
+                            span Log Out
