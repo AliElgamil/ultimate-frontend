@@ -1,36 +1,33 @@
 .header {
     background-color: #3c8dbc;
     padding: 17.8px 30px;
-    .toggle-sidebar {
+    .header-icon {
+        background-color: #fff;
+        color: #666;
+        padding: 10px 8.8px;
+        border-radius: 50%;
+        font-size: 1.1rem;
         cursor: pointer;
-        color: #fff;
+        position: relative;
+        margin: 0 15px;
+        &.toggle-notifications::after {
+            content: attr(data-noti);
+            position: absolute;
+            bottom: 60%;
+            left: 60%;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border-radius: 50%;
+            background-color: #e74c3c;
+            color: #fff;
+            text-align: center;
+            font-size: .8rem;
+        }
     }
     .notifications-container {
         display: inline;
         margin-left: 1.8rem;
-        .toggle-notifications {
-            background-color: #fff;
-            color: #666;
-            padding: 10px 8.8px;
-            border-radius: 50%;
-            font-size: 1.1rem;
-            cursor: pointer;
-            position: relative;
-            &::after {
-                content: "5";
-                position: absolute;
-                bottom: 60%;
-                left: 60%;
-                width: 20px;
-                height: 20px;
-                line-height: 20px;
-                border-radius: 50%;
-                background-color: #e74c3c;
-                color: #fff;
-                text-align: center;
-                font-size: 1rem;
-            }
-        }
         .dropdown-menu {
             width: 300px;
             top: 15px !important;

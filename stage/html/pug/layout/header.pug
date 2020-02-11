@@ -1,11 +1,11 @@
 header.header
-    i.fas.fa-exchange-alt.fa-lg.toggle-sidebar
+    i.fas.fa-exchange-alt.fa-lg.header-icon.toggle-sidebar
     .dropdown.notifications-container
-        i.fas.fa-bell.fa-lg.toggle-notifications#notifications(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+        i.fas.fa-bell.fa-lg.header-icon.toggle-notifications#notifications(data-noti='10' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
         .dropdown-menu(aria-labelledby='notifications')
-            .noti-head 
+            .noti-head
                 | Notifications
-                span.text-center 5
+                span.text-center 10
             .content
                 ul.list-unstyled
                     li 
@@ -22,4 +22,4 @@ header.header
                         | You Got Email 
             .noti-foot.text-center
                 a(href="#") Viwe All Notifications
-
+        i.fas.fa-expand.fa-lg.header-icon.toggle-fullscreen
