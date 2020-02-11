@@ -14,9 +14,9 @@ html(lang="en")
             include layout/sidebar
             .content-area
                 include layout/header
-                .content
-                    h1 #{pageTitle}
-                    
+                .container-fluid
+                    .content
+                        include components/page-head
 
         <!-- file js -->
         include layout/script

@@ -1,6 +1,105 @@
 .header {
     background-color: #3c8dbc;
+    padding: 17.8px 30px;
     .toggle-sidebar {
         cursor: pointer;
+        color: #fff;
+    }
+    .notifications-container {
+        display: inline;
+        margin-left: 1.8rem;
+        .toggle-notifications {
+            background-color: #fff;
+            color: #666;
+            padding: 10px 8.8px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            cursor: pointer;
+            position: relative;
+            &::after {
+                content: "5";
+                position: absolute;
+                bottom: 60%;
+                left: 60%;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                border-radius: 50%;
+                background-color: #e74c3c;
+                color: #fff;
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+        .dropdown-menu {
+            width: 300px;
+            top: 15px !important;
+            left: -10px !important;
+            box-shadow: 0px 1px 10px #b6b3b3;
+            border: none;
+            margin: 0;
+            padding: 0;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -20px;
+                left: 16px;
+                border-color: transparent transparent #666;
+                border-width: 10px;
+                border-style: solid;
+            }
+            .noti-head {
+                padding: 15px 20px;
+                background-color: #666;
+                color: #fff;
+                border-radius: .25rem .25rem 0 0;
+                span {
+                    float: right;
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    border-radius: 50%;
+                    background-color: $flatRedAlt;
+                }
+            }
+            .content {
+                padding: 15px 20px;
+                ul {
+                    li {
+                        color: #666;
+                        overflow: hidden;
+                        padding: 10px 0;
+                        span {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            line-height: 40px;
+                            background-color: #666;
+                            position: relative;
+                            display: block;
+                            margin-right: 15px;
+                            float: left;
+                            text-align: center;
+                            top: -5px;
+                        i {
+                            color: #fff;
+                        }
+                        }                        
+                    }
+                }
+            }
+            .noti-foot {
+                a {
+                    display: block;
+                    padding: 15px;
+                    border-top: 1px solid #666;
+                    color: #666;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
     }
 }
