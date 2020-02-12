@@ -1,5 +1,23 @@
 body {
     font-family: 'Lato', sans-serif;
+    &.lato {
+        font-family: 'Lato', sans-serif;
+    }
+    &.Roboto {
+        font-family: 'Roboto', sans-serif;
+    }
+    &.Open {
+        font-family: 'Open Sans', sans-serif;
+    }
+    &.Source {
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    &.Montserrat {
+        font-family: 'Montserrat', sans-serif;
+    }
+    &.Raleway {
+        font-family: 'Raleway', sans-serif;
+    }
 }
 
 .page {

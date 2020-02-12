@@ -52,6 +52,9 @@
             &:hover {
                 padding-left: 30px ;
             }
+            &.active::before {
+                border-color: $flatBlue;
+            }
         }
         .toggle-submenu {
             float: right;

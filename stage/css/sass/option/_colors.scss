@@ -18,7 +18,10 @@ $themes: (
         }
         .header .usermenu-container .dropdown-menu .user-info h3 {
                 color: $color;
-            }
+        }
+        .sidebar .links-area>li>a.active::before {
+            border-color: $color;
+        }
         
     }
 }

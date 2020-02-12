@@ -41,12 +41,20 @@ $(function () {
 
     $('.color-option li').each(function () {
         themeClasses.push($(this).data('theme'));
-        
     });
-    console.log(themeClasses);
     $('.color-option li').on('click', function () {
         $(this).addClass('active').siblings().removeClass('active');
         $('body').removeClass(themeClasses.join(' ')).addClass($(this).data('theme'));
+    });
+
+    // switch font 
+    var fontClass = [];
+
+    $('.font-option select option').each(function () {
+        fontClass.push($(this).val());
+    });
+    $('.font-option select').on('change', function () {
+        $('body').removeClass(fontClass.join(' ')).addClass($(this).find('option:selected').val());
     });
 
 });

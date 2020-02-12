@@ -1,4 +1,4 @@
-.setting-box.text-capitalize
+.setting-box.hide-setting
     .toggle-setting
         i.fas.fa-cog
     .gestting-content.text-center
@@ -10,5 +10,9 @@
                     li(data-theme=theme)
         .option-box.font-option
             h4.option-title fonts option
+            - var fonts = ['Lato', 'Roboto', 'Raleway', 'Open', 'Montserrat', 'Source']
+            select.form-control
+                each font in fonts
+                    option(value=font)=font + ' Font'
         .option-box.sidebar-option
             h4.option-title sidebar option
