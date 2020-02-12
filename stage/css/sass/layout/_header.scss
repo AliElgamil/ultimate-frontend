@@ -1,5 +1,5 @@
 .header {
-    background-color: #3c8dbc;
+    background-color: $flatBlueAlt;
     padding: 17.8px 30px;
     .header-icon {
         background-color: #fff;
@@ -109,7 +109,7 @@
             }
             .user {
                 font-weight: bold;
-                color: #666;
+                color: #fff;
                 margin: 0 20px;
                 font-size: 1.2rem;
             }
@@ -148,10 +148,11 @@
             }
             .links-box {
                 padding: 10px 20px;
-                border: 1px solid #b6b3b3;
-                border-radius: 5px;
+                border: 1px solid;
+                border-radius: .25rem;
                 color: #b6b3b3;
                 cursor: pointer;
+                transition: .3s;
                 i {
                     padding-right: 15px;
                     position: relative;
@@ -160,6 +161,15 @@
                 span {
                     font-size: .7rem;
                     font-weight: bold;
+                }
+                &.setting:hover {
+                    color: $flatGreen;
+                }
+                &.profile:hover {
+                    color: $flatBlue;
+                }
+                &.log-out:hover {
+                    color: $flatRedAlt;
                 }
             }
         }

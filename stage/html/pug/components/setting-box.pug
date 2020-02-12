@@ -1,0 +1,14 @@
+.setting-box.text-capitalize
+    .toggle-setting
+        i.fas.fa-cog
+    .gestting-content.text-center
+        .option-box.color-option
+            h4.option-title color option
+            - var themes = ['green-theme', 'blue-theme',  'red-theme',  'orange-theme', 'wisteria-theme']
+            ul.list-unstyled
+                each theme in themes
+                    li(data-theme=theme)
+        .option-box.font-option
+            h4.option-title fonts option
+        .option-box.sidebar-option
+            h4.option-title sidebar option

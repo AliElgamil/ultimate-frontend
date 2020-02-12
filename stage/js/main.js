@@ -28,8 +28,30 @@ $(function () {
             closeFullscreen();
         }
     });
+    // Hide / Show Setting Box
 
-    var elem = document.documentElement;
+    $('.toggle-setting').on('click', function () {
+        $(this).find('i').toggleClass('fa-spin');
+        $(this).parent().toggleClass('hide-setting');
+    });
+
+    // switch color theme
+
+    var themeClasses = [];
+
+    $('.color-option li').each(function () {
+        themeClasses.push($(this).data('theme'));
+        
+    });
+    console.log(themeClasses);
+    $('.color-option li').on('click', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $('body').removeClass(themeClasses.join(' ')).addClass($(this).data('theme'));
+    });
+
+});
+
+var elem = document.documentElement;
 
 /* View in fullscreen */
     function openFullscreen() {
@@ -56,5 +78,3 @@ $(function () {
         document.msExitFullscreen();
     }
     }
-
-});
